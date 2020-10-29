@@ -1,8 +1,4 @@
-﻿using BundleTransformer.Core.Configuration;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using MongoDB.Driver.Core.Configuration;
-using System.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace DB_TaskAssistant
 {
@@ -20,17 +16,11 @@ namespace DB_TaskAssistant
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql();
+                optionsBuilder.UseNpgsql("Host = localhost; Port = 5432; Database = TaskAssistant; Username = postgres; Password = PostgrePas123");
             }
-        }
-
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<ConfigurationContext>(options => {
-                options.UseNpgsql(Configuration.);
-            });
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
