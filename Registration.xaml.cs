@@ -1,87 +1,78 @@
-﻿using DBTaskAssistant;
-using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+﻿// <copyright file="Registration.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace TaskAssistant
 {
+    using System.Windows;
+    using DBTaskAssistant;
+    using DBTaskAssistant.ViewModels;
+
     /// <summary>
-    /// Interaction logic for Registration.xaml
+    /// Class that adds logic to Registration View.
     /// </summary>
     public partial class Registration : Window
     {
         TaskAssistantContext taskADB;
 
-        string emaildef = "Електронна пошта";
-
-        string passImagePath = @"C:\Users\gradk\source\repos\TaskAssistant\TaskAssistant\Images\Password.jpg";
-
-        ImageBrush passImage;
+        string passtagText;
+        string conftagText;
 
         public Registration()
         {
-            InitializeComponent();
-            passImage = new ImageBrush();
-            passImage.ImageSource =
-                new BitmapImage(
-                    new Uri(passImagePath, UriKind.Relative)
-                );
-            passImage.AlignmentX = AlignmentX.Left;
-            passImage.Stretch = Stretch.None;
+            this.InitializeComponent();
+            passtagText = PassBox.Tag.ToString();
+            conftagText = ConfPassBox.Tag.ToString();
         }
 
-        private void GotFocusField(object sender, RoutedEventArgs e)
+        private void PassBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            TextBox t = (TextBox)sender;
-
-            if (t.Text == emaildef)
-                t.Text = string.Empty;
+            if (PassBox.Password == string.Empty)
+            {
+                PassBox.Tag = passtagText;
+            }
+            else
+            {
+                PassBox.Tag = string.Empty;
+            }
         }
 
-        private void LostFocusField(object sender, RoutedEventArgs e)
+        private void ConfPassBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            TextBox t = (TextBox)sender;
-
-            if (t.Text == string.Empty)
-                t.Text = emaildef;
-        }
-
-        private void passBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            PasswordBox t = (PasswordBox)sender;
-            if (t.Password == string.Empty)
-                t.Background = null;
-        }
-
-        private void passBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            PasswordBox t = (PasswordBox)sender;
-            if (t.Password == string.Empty)
-                t.Background = passImage;
-        }
-
-        private void signUpButt_Click(object sender, RoutedEventArgs e)
-        {
-            taskADB = new TaskAssistantContext();
-            var user = new User();
-            user.Name = fNameBox.Text;
-            user.Surname = lNameBox.Text;
-            user.Username = emailBox.Text;
-            user.Salt = DataGenerator.GetRandStr(6, 6, true);
-            user.Password = DataGenerator.GetSaltHash(passBox.Password, user.Salt);
-
-            taskADB.Users.Add(user);
-            taskADB.SaveChanges();
-
-            SignIn signInPage = new SignIn();
-            signInPage.Show();
-            this.Close();
+            if (ConfPassBox.Password == string.Empty)
+            {
+                ConfPassBox.Tag = conftagText;
+            }
+            else
+            {
+                ConfPassBox.Tag = string.Empty;
+            }
         }
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
+            SignIn signIn = new SignIn();
+            this.Close();
+            signIn.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.taskADB = new TaskAssistantContext();
+            var salt = DataGenerator.GetRandStr(6, 6, true);
+            var userModel = new UserModel()
+            {
+                Name = firstNameBox.Text,
+                Surname = secondNameBox.Text,
+                Username = UsernameBox.Text,
+                Salt = salt,
+                Password = DataGenerator.GetSaltHash(PassBox.Password, salt),
+            };
+
+            var user = new User(userModel.Username, userModel.Name, userModel.Surname, userModel.Password, userModel.Salt);
+            this.taskADB.Users.Add(user);
+            this.taskADB.SaveChanges();
+
             SignIn signInPage = new SignIn();
             signInPage.Show();
             this.Close();

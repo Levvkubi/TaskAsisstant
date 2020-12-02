@@ -8,24 +8,23 @@ namespace DBTaskAssistant.ViewModels
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
-    using System.Drawing;
     using System.Linq;
     using System.Runtime.CompilerServices;
-    using System.Threading;
     using DevExpress.Mvvm;
+    using Microsoft.EntityFrameworkCore;
 
     public class MainVM : ViewModelBase
     {
         TaskAssistantContext taskADB;
         private Task _CurrTask;
-        User user1 = new User() { Username="kos@gmail.com"};
+        User currentUser = new User() { Username = "kos@gmail.com" };
 
         public ObservableCollection<Task> tasks { get; set; }
 
         public MainVM()
         {
             taskADB = new TaskAssistantContext();
-            tasks = new ObservableCollection<Task>(taskADB.Users.Find(user1.Username).Tasks.ToList());
+            tasks = new ObservableCollection<Task>(taskADB.Users.Include(u => u.Tasks).FirstOrDefault(u => u.Username == currentUser.Username).Tasks);
         }
 
         public Task CurrTask
@@ -52,15 +51,9 @@ namespace DBTaskAssistant.ViewModels
             }
         }
 
-        public void TasksAdd(Task task) 
-        {
-            tasks.Add(task);
-        }
-
         public void UpdateTasks()
         {
-            tasks = new ObservableCollection<Task>(taskADB.Users.Find(user1.Username).Tasks.ToList());
-
+            tasks = new ObservableCollection<Task>(taskADB.Users.Include(u => u.Tasks).FirstOrDefault(u => u.Username == currentUser.Username).Tasks);
         }
 
         public void SortByPriority()

@@ -1,10 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// <copyright file="TaskAssistantContext.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace DB_TaskAssistant
+namespace DBTaskAssistant
 {
+    using System.IO;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+
+    /// <summary>
+    /// Class that configures DB connection.
+    /// </summary>
     public partial class TaskAssistantContext : DbContext
     {
-        public TaskAssistantContext() {}
+        public TaskAssistantContext() { }
 
         public TaskAssistantContext(DbContextOptions<TaskAssistantContext> options)
             : base(options)
@@ -12,14 +21,18 @@ namespace DB_TaskAssistant
         }
 
         public virtual DbSet<Task> Tasks { get; set; }
+
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Host = localhost; Port = 5432; Database = TaskAssistant; Username = postgres; Password = PostgrePas123");
+                var builder = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", false, true);
+                var strConnection = builder.Build().GetConnectionString("DefaultConnection");
+                optionsBuilder.UseNpgsql(strConnection);
             }
         }
 
@@ -81,6 +94,11 @@ namespace DB_TaskAssistant
                     .IsRequired()
                     .HasColumnName("surname")
                     .HasMaxLength(30);
+
+                entity.Property(e => e.Salt)
+                    .IsRequired()
+                    .HasColumnName("salt")
+                    .HasMaxLength(6);
             });
 
             OnModelCreatingPartial(modelBuilder);
