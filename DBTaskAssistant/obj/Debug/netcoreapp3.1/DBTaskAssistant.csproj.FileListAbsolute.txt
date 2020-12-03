@@ -24,6 +24,7 @@ D:\Programming\С#\3Curs\ProgramIngenering\TaskAssistant\DBTaskAssistant\obj\Deb
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAssistant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.dll
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAssistant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.pdb
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAssistant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.genruntimeconfig.cache
+<<<<<<< HEAD
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.deps.json
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.runtimeconfig.json
@@ -37,3 +38,18 @@ D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\DBTaskAssistant\obj\Deb
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.dll
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.pdb
 D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.genruntimeconfig.cache
+=======
+D:\Repository\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Repository\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.deps.json
+D:\Repository\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.runtimeconfig.json
+D:\Repository\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.runtimeconfig.dev.json
+D:\Repository\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.dll
+D:\Repository\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.pdb
+D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.csprojAssemblyReference.cache
+D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.csproj.CoreCompileInputs.cache
+D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.AssemblyInfoInputs.cache
+D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.AssemblyInfo.cs
+D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.dll
+D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.pdb
+D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.genruntimeconfig.cache
+>>>>>>> 63159da1ce969bb2502e11a379b02c973979a725

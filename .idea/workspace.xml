@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="10f0795c-b847-412e-a7a4-1bfa62397946" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.vs/TaskAssistant/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/TaskAssistant/config/applicationhost.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/TaskAssistant/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/ViewModels/MainVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/ViewModels/MainVM.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/DBTaskAssistant.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/DBTaskAssistant.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/DBTaskAssistant.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/DBTaskAssistant.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/Debug/netcoreapp3.1/DBTaskAssistant.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTaskAssistant/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DBTaskAssistant/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/Registration.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/Registration.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/SignIn.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/SignIn.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/DBTaskAssistant.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/bin/Debug/netcoreapp3.1/TaskAssistant.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.designer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.designer.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/Debug/netcoreapp3.1/TaskAssistant_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/TaskAssistant.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/TaskAssistant.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/TaskAssistant.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/TaskAssistant.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskAssistant/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaskAssistant/obj/project.nuget.cache" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1l9IXB7qXNWCqGlHqONZ4UuC03X" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="10f0795c-b847-412e-a7a4-1bfa62397946" name="Default Changelist" comment="" />
+      <created>1607002917032</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607002917032</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

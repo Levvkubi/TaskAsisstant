@@ -44,19 +44,29 @@ namespace TaskAssistant
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+#if DEBUG
+            if(this.usernameBox.Text == "a")
+            {
+                usernameBox.Text = "kos@gmail.com";
+                this.PassBox.Password = "qwerty123";
+            }
+#endif
             taskADB = new TaskAssistantContext();
-            MessageBox.Show(taskADB.Tasks.ToList().Count.ToString());
 
-            //var loggedUser = from u in taskADB.Users.ToList()
-            //                 where u.Username == usernameBox.Text && DataGenerator.GetSaltHash(PassBox.Password, u.Salt) == u.Password
-            //                 select u;
+            var loggedUser = from u in taskADB.Users.ToList()
+                             where u.Username == usernameBox.Text && DataGenerator.GetSaltHash(PassBox.Password, u.Salt) == u.Password
+                             select u;
 
-            //if (loggedUser.ToList().Count > 0)
-            //{
-            //    MainView mainPage = new MainView(loggedUser.First());
-            //    mainPage.Show();
-            //    this.Close();
-            //}
+            if (loggedUser.ToList().Count > 0)
+            {
+                MainView mainPage = new MainView(loggedUser.First());
+                mainPage.Show();
+                this.Close();
+            }
+            else if (loggedUser.ToList().Count == 0)
+            {
+                usernameErrorBloc.Text = "Enter correct data!";
+            }
         }
     }
 }
