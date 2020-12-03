@@ -40,17 +40,6 @@ namespace TaskAssistant
             viewmodel.Delete();
         }
 
-        private void SortByTime_Click(object sender, RoutedEventArgs e)
-        {
-            viewmodel.SortByTime();
-        }
-
-        private void SortByPriority_Click(object sender, RoutedEventArgs e)
-        {
-
-            viewmodel.SortByPriority();
-        }
-
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -58,7 +47,7 @@ namespace TaskAssistant
 
         private void UserEdit_Click(object sender, RoutedEventArgs e)
         {
-            //    //Ed_Account ed_Account = new Ed_Account();
+            //    Ed_Account ed_Account = new Ed_Account();
             //    this.Close();
             //    ed_Account.Show();
         }

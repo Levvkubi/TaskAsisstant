@@ -24,29 +24,35 @@
                 <Setter Property="Width" Value="80"/>
                 <Setter Property="Height" Value="80"/>
                 <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Visibility" Value="Visible"/>
+                <!--<Setter Property="IsEnabled" Value="{Binding ElementName=Listbox, Path=SelectedIndex ,Converter={StaticResource taskToBool}}"/>-->
                 <!--<Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate>
                             <ControlTemplate.Triggers>
-                                -->
-                <!--<DataTrigger Binding="{Binding ElementName=Listbox, Path=SelectedIndex}"
+                                
+                                <DataTrigger Binding="{Binding ElementName=Listbox, Path=SelectedIndex}"
                                             Value="-1">
-                                    <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Visibility" Value="Visible"/>
                                 </DataTrigger>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="BorderThickness" Value="2"/>
                                     <Setter Property="BorderBrush" Value="Red"/>
-                                </Trigger>-->
-                <!--
+                                </Trigger>
+                
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>-->
             </Style.Setters>
             <Style.Triggers>
-                <Trigger Property="IsEnabled" Value="False">
+                <!--<Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Visibility" Value="Collapsed"/>
-                </Trigger>
+                </Trigger>-->
+                <DataTrigger Binding="{Binding ElementName=Listbox, Path=SelectedIndex}"
+                                            Value="-1">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
             </Style.Triggers>
         </Style>
         <Style TargetType="TextBlock" x:Key="ItemView">
@@ -329,15 +335,6 @@
             </Border.Background>
         </Border>
         <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
-            <Button x:Name="SortByPriority"
-                    Content="Сортувати за пріорітетом" 
-                    Width="350"
-                    Margin="10 0"
-                    Style="{StaticResource TextButt}" Click="SortByPriority_Click"/>
-            <Button x:Name="SortByTime"
-                    Content="Сортувати за часом" 
-                    Width="300"
-                    Style="{StaticResource TextButt}" Click="SortByTime_Click"/>
             <Button x:Name="UserEdit"
                     Content="Налаштування" 
                     Style="{StaticResource TextButt}" Click="UserEdit_Click"/>

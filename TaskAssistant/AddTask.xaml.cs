@@ -34,7 +34,7 @@ namespace TaskAssistant
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            int index = taskADB.Tasks.Count();
+            int index = taskADB.Tasks.Count() + 10;
             Random rnd = new Random();
 
             TaskModel newTask = new TaskModel();
