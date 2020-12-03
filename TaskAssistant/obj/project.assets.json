@@ -1537,23 +1537,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\levvk\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\gradk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\TaskAssistant\\TaskAssistant.csproj",
+      "projectUniqueName": "D:\\Repository\\TaskAsisstant\\TaskAssistant\\TaskAssistant.csproj",
       "projectName": "TaskAssistant",
-      "projectPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\TaskAssistant\\TaskAssistant.csproj",
-      "packagesPath": "C:\\Users\\levvk\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\TaskAssistant\\obj\\",
+      "projectPath": "D:\\Repository\\TaskAsisstant\\TaskAssistant\\TaskAssistant.csproj",
+      "packagesPath": "C:\\Users\\gradk\\.nuget\\packages\\",
+      "outputPath": "D:\\Repository\\TaskAsisstant\\TaskAssistant\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\levvk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gradk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1566,8 +1562,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\DBTaskAssistant\\DBTaskAssistant.csproj": {
-              "projectPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\DBTaskAssistant\\DBTaskAssistant.csproj"
+            "D:\\Repository\\TaskAsisstant\\DBTaskAssistant\\DBTaskAssistant.csproj": {
+              "projectPath": "D:\\Repository\\TaskAsisstant\\DBTaskAssistant\\DBTaskAssistant.csproj"
             }
           }
         }
@@ -1618,7 +1614,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

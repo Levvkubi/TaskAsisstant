@@ -4,6 +4,8 @@
 
 namespace TaskAssistant
 {
+    using System.Linq;
+    using System.Text.RegularExpressions;
     using System.Windows;
     using DBTaskAssistant;
     using DBTaskAssistant.ViewModels;
@@ -69,13 +71,38 @@ namespace TaskAssistant
                 Password = DataGenerator.GetSaltHash(PassBox.Password, salt),
             };
 
-            var user = new User(userModel.Username, userModel.Name, userModel.Surname, userModel.Password, userModel.Salt);
-            this.taskADB.Users.Add(user);
-            this.taskADB.SaveChanges();
+            var userList = from u in taskADB.Users.ToList()
+                           where u.Username == UsernameBox.Text
+                           select u;
 
-            SignIn signInPage = new SignIn();
-            signInPage.Show();
-            this.Close();
+            if (userList.ToList().Count > 0)
+            {
+                passwordErrorBloc.Text = string.Empty;
+                confPasswordErrorBloc.Text = string.Empty;
+                usernameErrorBloc.Text = "Such username already exits, try another!";
+            }
+            else if (!Regex.IsMatch(PassBox.Password, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"))
+            {
+                confPasswordErrorBloc.Text = string.Empty;
+                usernameErrorBloc.Text = string.Empty;
+                passwordErrorBloc.Text = "Password does not match the template!";
+            }
+            else if (PassBox.Password != ConfPassBox.Password)
+            {
+                passwordErrorBloc.Text = string.Empty;
+                usernameErrorBloc.Text = string.Empty;
+                confPasswordErrorBloc.Text = "Password confirmation does not match!";
+            }
+            else
+            {
+                var user = new User(userModel.Username, userModel.Name, userModel.Surname, userModel.Password, userModel.Salt);
+                this.taskADB.Users.Add(user);
+                this.taskADB.SaveChanges();
+
+                SignIn signInPage = new SignIn();
+                signInPage.Show();
+                this.Close();
+            }
         }
     }
 }
