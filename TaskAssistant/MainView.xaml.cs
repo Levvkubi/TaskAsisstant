@@ -67,5 +67,20 @@ namespace TaskAssistant
         {
 
         }
+
+        private void SortBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            switch (SortBox.SelectedIndex)
+            {
+                case 0:
+                    viewmodel.SortByPriority();
+                    break;
+                case 1:
+                    viewmodel.SortByTime();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
