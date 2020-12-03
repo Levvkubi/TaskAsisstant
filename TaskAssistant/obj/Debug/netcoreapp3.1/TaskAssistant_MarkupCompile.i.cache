@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Programming\С#\3Curs\ProgramIngenering\TaskAssistant\TaskAssistant\obj\Debug\netcoreapp3.1\
+D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\TaskAssistant\obj\Debug\netcoreapp3.1\
 TaskAssistant
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-D:\Programming\С#\3Curs\ProgramIngenering\TaskAssistant\TaskAssistant\App.xaml
+D:\Programming\С#\3Curs\ProgramIngenering\TaskAsisstant\TaskAssistant\App.xaml
 41112314219
 
 91370912502
-215152637743
+215-874585642
 AddTask.xaml;MainView.xaml;Registration.xaml;SignIn.xaml;
 
-True
+False
 

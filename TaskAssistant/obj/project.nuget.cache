@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wOytHtKLeDuHJRUQAxa+dk9he1VPMkvC7jXhPGuHAyA5YZ1B+XUaqJ0KDn3hBx7Cp4Ue0zaJ8Shtz1mgIdgjwQ==",
+  "dgSpecHash": "S4R5seS78OurwXhCT8O1yUUFpJwkveMxJpFACXMenvAD3v+f8bbv3rz1MB2s/dcyAV/aspk/LPthliVN5opvLg==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\TaskAssistant\\TaskAssistant.csproj",
+  "projectFilePath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAsisstant\\TaskAssistant\\TaskAssistant.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\levvk\\.nuget\\packages\\devexpressmvvm\\20.1.6\\devexpressmvvm.20.1.6.nupkg.sha512",
     "C:\\Users\\levvk\\.nuget\\packages\\microsoft.codeanalysis.fxcopanalyzers\\2.9.6\\microsoft.codeanalysis.fxcopanalyzers.2.9.6.nupkg.sha512",

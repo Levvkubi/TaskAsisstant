@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WUDVgpXJW97zSzLKyK5/iNvgYJqF8+N6xBnzTTS/DOH9xMEfCfd4hvbWRhQwUJf0XoKdv6V/ytTw7Y4fKuZGlQ==",
+  "dgSpecHash": "ScKK6zcUVcqoKSbrhVE8qAHwEQ5PJz5pWAo8b9cXdrcBU1SsnJcqG1G4tLrI0GQZy+aEhfiY5fJDSUSORmUHYg==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\DBTaskAssistant\\DBTaskAssistant.csproj",
+  "projectFilePath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAsisstant\\DBTaskAssistant\\DBTaskAssistant.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\levvk\\.nuget\\packages\\devexpressmvvm\\20.1.6\\devexpressmvvm.20.1.6.nupkg.sha512",
     "C:\\Users\\levvk\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

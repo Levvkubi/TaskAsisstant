@@ -1543,11 +1543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\TaskAssistant\\TaskAssistant.csproj",
+      "projectUniqueName": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAsisstant\\TaskAssistant\\TaskAssistant.csproj",
       "projectName": "TaskAssistant",
-      "projectPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\TaskAssistant\\TaskAssistant.csproj",
+      "projectPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAsisstant\\TaskAssistant\\TaskAssistant.csproj",
       "packagesPath": "C:\\Users\\levvk\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\TaskAssistant\\obj\\",
+      "outputPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAsisstant\\TaskAssistant\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1566,8 +1566,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\DBTaskAssistant\\DBTaskAssistant.csproj": {
-              "projectPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAssistant\\DBTaskAssistant\\DBTaskAssistant.csproj"
+            "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAsisstant\\DBTaskAssistant\\DBTaskAssistant.csproj": {
+              "projectPath": "D:\\Programming\\С#\\3Curs\\ProgramIngenering\\TaskAsisstant\\DBTaskAssistant\\DBTaskAssistant.csproj"
             }
           }
         }
