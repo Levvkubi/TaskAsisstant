@@ -8,7 +8,7 @@ namespace TaskAssistant
     using System.Globalization;
     using System.Windows.Data;
 
-    class PriorityColor : IValueConverter
+    public class PriorityColor : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

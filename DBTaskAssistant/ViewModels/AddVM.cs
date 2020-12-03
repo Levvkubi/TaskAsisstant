@@ -38,7 +38,7 @@ namespace DBTaskAssistant
                 this.priorities.Add(i);
             }
 
-            for (int i = 1; i < 25; i++)
+            for (int i = 0; i < 24; i++)
             {
                 this.hours.Add(i);
             }
