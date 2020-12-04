@@ -13,7 +13,7 @@ namespace TaskAssistant
     /// </summary>
     public partial class MainView : Window
     {
-        MainVM viewmodel;
+        private MainVM viewmodel;
         User currentUser = new User();
 
         public MainView(User loggedUser)
@@ -65,7 +65,6 @@ namespace TaskAssistant
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
         }
     }
 }

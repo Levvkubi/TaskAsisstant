@@ -12,22 +12,6 @@ namespace DBTaskAssistant
     {
         public Task task;
 
-        public ObservableCollection<int> hours { get; set; }
-
-        public ObservableCollection<int> priorities { get; set; }
-
-        public ObservableCollection<int> minutes { get; set; }
-
-        public int currHour { get; set; }
-
-        public int currMinute { get; set; }
-
-        public DateTime date { get; set; }
-
-        public string Node { get; set; }
-
-        public int priority { get; set; }
-
         public AddVM()
         {
             this.hours = new ObservableCollection<int>();
@@ -53,6 +37,22 @@ namespace DBTaskAssistant
             this.date = DateTime.Now;
             this.priority = 3;
         }
+
+        public ObservableCollection<int> hours { get; set; }
+
+        public ObservableCollection<int> priorities { get; set; }
+
+        public ObservableCollection<int> minutes { get; set; }
+
+        public int currHour { get; set; }
+
+        public int currMinute { get; set; }
+
+        public DateTime date { get; set; }
+
+        public string Node { get; set; }
+
+        public int priority { get; set; }
 
         public void Zapovn(ObservableCollection<Task> tasks, Task currtask, bool change)
         {

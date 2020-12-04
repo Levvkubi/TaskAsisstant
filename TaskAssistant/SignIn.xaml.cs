@@ -13,10 +13,13 @@ namespace TaskAssistant
     /// </summary>
     public partial class SignIn : Window
     {
-        TaskAssistantContext taskADB;
+        private TaskAssistantContext taskADB;
 
-        string tagText;
+        private string tagText;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignIn"/> class.
+        /// </summary>
         public SignIn()
         {
             this.InitializeComponent();
@@ -25,7 +28,7 @@ namespace TaskAssistant
 
         private void PassBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (this.PassBox.Password == string.Empty)
+            if (this.PassBox.Password.Length == 0)
             {
                 PassBox.Tag = tagText;
             }

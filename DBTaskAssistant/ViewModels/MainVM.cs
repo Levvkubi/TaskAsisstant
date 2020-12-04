@@ -15,11 +15,11 @@ namespace DBTaskAssistant.ViewModels
 
     public class MainVM : ViewModelBase
     {
+        public ObservableCollection<Task> tasks { get; set; }
+
         TaskAssistantContext taskADB;
         private Task _CurrTask;
         User currentUser = new User() { Username = "kos@gmail.com" };
-
-        public ObservableCollection<Task> tasks { get; set; }
 
         public MainVM()
         {
