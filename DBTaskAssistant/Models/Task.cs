@@ -6,17 +6,27 @@ namespace DBTaskAssistant
 {
     using System;
 
-    /// <summary>
-    /// Class Task that describes the Model.
-    /// </summary>
     public partial class Task
     {
-        public Task() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Task"/> class.
+        /// </summary>
+        public Task()
+        {
+        }
 
-        public Task(int id, string usname, string note, DateTime date, int priority)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Task"/> class.
+        /// </summary>
+        /// <param name="id">ID of the task.</param>
+        /// <param name="username">User's username.</param>
+        /// <param name="note">User's note.</param>
+        /// <param name="date">User's date.</param>
+        /// <param name="priority">User's priority.</param>
+        public Task(int id, string username, string note, DateTime date, int priority)
         {
             this.Id = id;
-            this.Username = usname;
+            this.Username = username;
             this.Note = note;
             this.Date = date;
             this.Priority = priority;
