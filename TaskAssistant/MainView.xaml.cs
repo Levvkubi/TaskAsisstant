@@ -1,25 +1,23 @@
-﻿// <copyright file="MainView.xaml.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace TaskAssistant
+﻿namespace TaskAssistant
 {
     using System.Windows;
     using DBTaskAssistant;
     using DBTaskAssistant.ViewModels;
+    using TaskAssistantForms;
 
     /// <summary>
     /// Class that adds logic to Main View.
     /// </summary>
     public partial class MainView : Window
     {
-        MainVM viewmodel;
-        User currentUser = new User();
+        private User currentUser = new User();
+        private MainVM viewmodel;
 
         public MainView(User loggedUser)
         {
             InitializeComponent();
             currentUser = loggedUser;
+            DataContext = new MainVM(loggedUser);
             viewmodel = (MainVM)DataContext;
         }
 
@@ -28,11 +26,9 @@ namespace TaskAssistant
             System.Windows.Media.Effects.BlurEffect objBlur = new System.Windows.Media.Effects.BlurEffect();
             objBlur.Radius = 4;
             this.Effect = objBlur;
-            AddTask addTask = new AddTask(currentUser);
+            AddTask addTask = new AddTask(currentUser, viewmodel.Tasks);
             addTask.ShowDialog();
-
             this.Effect = null;
-            viewmodel.UpdateTasks();
         }
 
         private void DeleteButt_Click(object sender, RoutedEventArgs e)
@@ -47,9 +43,9 @@ namespace TaskAssistant
 
         private void UserEdit_Click(object sender, RoutedEventArgs e)
         {
-            //    Ed_Account ed_Account = new Ed_Account();
-            //    this.Close();
-            //    ed_Account.Show();
+            Ed_Account ed_Account = new Ed_Account(currentUser);
+            this.Close();
+            ed_Account.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

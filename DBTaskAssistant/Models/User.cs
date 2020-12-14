@@ -33,6 +33,19 @@ namespace DBTaskAssistant
             this.Salt = salt;
         }
 
+        public User(User user)
+        {
+            this.Username = user.Username;
+            this.Name = user.Name;
+            this.Surname = user.Surname;
+            this.Password = user.Password;
+            this.Salt = user.Salt;
+            foreach (var value in user.Tasks)
+            {
+                Tasks.Add(value);
+            }
+        }
+
         /// <summary>
         /// Gets or sets username.
         /// </summary>

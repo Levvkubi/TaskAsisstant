@@ -1,10 +1,7 @@
-﻿// <copyright file="AddTask.xaml.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace TaskAssistant
+﻿namespace TaskAssistant
 {
     using System;
+    using System.Collections.ObjectModel;
     using System.Linq;
     using System.Windows;
     using DBTaskAssistant;
@@ -15,16 +12,18 @@ namespace TaskAssistant
     /// </summary>
     public partial class AddTask : Window
     {
-        AddVM addVM;
-        TaskAssistantContext taskADB;
-        User currentUser = new User();
+        private AddVM addVM;
+        private TaskAssistantContext taskADB;
+        private User currentUser = new User();
+        private ObservableCollection<Task> taskList;
 
-        public AddTask(User loggedUser)
+        public AddTask(User loggedUser, ObservableCollection<Task> tasks)
         {
             InitializeComponent();
             taskADB = new TaskAssistantContext();
             currentUser = loggedUser;
             addVM = (AddVM)DataContext;
+            taskList = tasks;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -49,6 +48,7 @@ namespace TaskAssistant
             taskADB.Users.Find(currentUser.Username).Tasks.Add(task);
             taskADB.Tasks.Add(task);
             taskADB.SaveChanges();
+            taskList.Add(task);
             this.Close();
         }
     }
