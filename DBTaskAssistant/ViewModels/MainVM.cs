@@ -1,8 +1,4 @@
-﻿// <copyright file="MainVM.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace DBTaskAssistant.ViewModels
+﻿namespace DBTaskAssistant.ViewModels
 {
     using System;
     using System.Collections.Generic;
@@ -15,16 +11,19 @@ namespace DBTaskAssistant.ViewModels
 
     public class MainVM : ViewModelBase
     {
-        TaskAssistantContext taskADB;
+        private TaskAssistantContext taskADB;
         private Task _CurrTask;
-        User currentUser = new User() { Username = "kos@gmail.com" };
+        User currentUser;
 
-        public ObservableCollection<Task> tasks { get; set; }
+        public ObservableCollection<Task> Tasks { get; set; }
 
-        public MainVM()
+        public MainVM() { }
+
+        public MainVM(User loggedUser)
         {
+            currentUser = loggedUser;
             taskADB = new TaskAssistantContext();
-            tasks = new ObservableCollection<Task>(taskADB.Users.Include(u => u.Tasks).FirstOrDefault(u => u.Username == currentUser.Username).Tasks);
+            Tasks = new ObservableCollection<Task>(taskADB.Users.Include(u => u.Tasks).FirstOrDefault(u => u.Username == loggedUser.Username).Tasks);
         }
 
         public Task CurrTask
@@ -47,26 +46,26 @@ namespace DBTaskAssistant.ViewModels
             {
                 taskADB.Tasks.Remove(taskADB.Tasks.Find(CurrTask.Id));
                 taskADB.SaveChanges();
-                tasks.Remove(CurrTask);
+                Tasks.Remove(CurrTask);
             }
         }
 
         public void UpdateTasks()
         {
-            tasks = new ObservableCollection<Task>(taskADB.Users.Include(u => u.Tasks).FirstOrDefault(u => u.Username == currentUser.Username).Tasks);
+            Tasks = new ObservableCollection<Task>(taskADB.Users.Include(u => u.Tasks).FirstOrDefault(u => u.Username == currentUser.Username).Tasks);
         }
 
         public void SortByPriority()
         {
-            for (int i = 1; i < tasks.Count; i++)
+            for (int i = 1; i < Tasks.Count; i++)
             {
-                for (int j = 0; j < tasks.Count; j++)
+                for (int j = 0; j < Tasks.Count; j++)
                 {
-                    if (tasks[j].Priority > tasks[i].Priority)
+                    if (Tasks[j].Priority > Tasks[i].Priority)
                     {
-                        Task currtask = tasks[i];
-                        tasks[i] = tasks[j];
-                        tasks[j] = currtask;
+                        Task currtask = Tasks[i];
+                        Tasks[i] = Tasks[j];
+                        Tasks[j] = currtask;
                     }
                 }
             }
@@ -74,15 +73,15 @@ namespace DBTaskAssistant.ViewModels
 
         public void SortByTime()
         {
-            for (int i = 1; i < tasks.Count; i++)
+            for (int i = 1; i < Tasks.Count; i++)
             {
-                for (int j = 0; j < tasks.Count; j++)
+                for (int j = 0; j < Tasks.Count; j++)
                 {
-                    if (tasks[j].Date > tasks[i].Date)
+                    if (Tasks[j].Date > Tasks[i].Date)
                     {
-                        Task currtask = tasks[i];
-                        tasks[i] = tasks[j];
-                        tasks[j] = currtask;
+                        Task currtask = Tasks[i];
+                        Tasks[i] = Tasks[j];
+                        Tasks[j] = currtask;
                     }
                 }
             }

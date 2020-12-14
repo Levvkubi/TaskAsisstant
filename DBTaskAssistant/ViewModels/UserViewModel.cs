@@ -170,9 +170,13 @@ namespace DBTaskAssistant.ViewModels
                         {
                             result = "Password cannot be empty";
                         }
-                        else if (this.Password.Length < 6 || this.Password.Length > 25)
+                        else if (!Regex.IsMatch(this.Password, @"^(?=.*[a - z])(?=.*[A - Z])(?=.*\d)(?=.*[^\da - zA - Z]).{ 6,15}$"))
                         {
-                            result = "Password must contain 6-25 symbols";
+                            result = "Password does not match the template";
+                        }
+                        else if (this.Password.Length < 6 || this.Password.Length > 15)
+                        {
+                            result = "Password must contain 6-15 symbols";
                         }
 
                         break;

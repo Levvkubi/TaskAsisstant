@@ -25,30 +25,8 @@
                 <Setter Property="Height" Value="80"/>
                 <Setter Property="BorderThickness" Value="0"/>
                 <Setter Property="Visibility" Value="Visible"/>
-                <!--<Setter Property="IsEnabled" Value="{Binding ElementName=Listbox, Path=SelectedIndex ,Converter={StaticResource taskToBool}}"/>-->
-                <!--<Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate>
-                            <ControlTemplate.Triggers>
-                                
-                                <DataTrigger Binding="{Binding ElementName=Listbox, Path=SelectedIndex}"
-                                            Value="-1">
-                                    <Setter Property="Visibility" Value="Visible"/>
-                                </DataTrigger>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="BorderThickness" Value="2"/>
-                                    <Setter Property="BorderBrush" Value="Red"/>
-                                </Trigger>
-                
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>-->
             </Style.Setters>
             <Style.Triggers>
-                <!--<Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Visibility" Value="Collapsed"/>
-                </Trigger>-->
                 <DataTrigger Binding="{Binding ElementName=Listbox, Path=SelectedIndex}"
                                             Value="-1">
                     <Setter Property="Visibility" Value="Collapsed"/>
@@ -346,7 +324,7 @@
                  Grid.Column="2"
                  x:Name="Listbox"
                  HorizontalAlignment="Stretch" 
-                 ItemsSource="{Binding tasks}"
+                 ItemsSource="{Binding Tasks}"
                  SelectedItem="{Binding CurrTask}"
                  Background="Transparent"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
