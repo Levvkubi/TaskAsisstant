@@ -9,8 +9,6 @@
     /// </summary>
     public class AddVM : ViewModelBase
     {
-        private Task task;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="AddVM"/> class.
         /// </summary>

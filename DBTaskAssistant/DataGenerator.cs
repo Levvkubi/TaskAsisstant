@@ -116,7 +116,7 @@
                     id = startId + i;
                     while (Contain(context.Tasks.ToList(), id))
                     {
-                        id = rnd.Next(context.Tasks.Count() * 2);
+                        id = context.Tasks.Max(i => i.Id) + 1;
                     }
 
                     usname = users[rnd.Next(users.Count)].Username;

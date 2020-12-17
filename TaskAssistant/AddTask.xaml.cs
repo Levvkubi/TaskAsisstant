@@ -23,6 +23,7 @@
         /// </summary>
         /// <param name="loggedUser">User that is logged.</param>
         /// <param name="tasks">Collection of tasks of current user.</param>
+        /// <param name="oldtask">Task to change .</param>
         public AddTask(User loggedUser, ObservableCollection<Task> tasks, Task oldtask = null)
         {
             InitializeComponent();

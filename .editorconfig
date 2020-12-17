@@ -17,3 +17,6 @@ dotnet_diagnostic.CA1303.severity = none
 
 # CA1307: Specify StringComparison
 dotnet_diagnostic.CA1307.severity = none
+
+# SA1300: Element should begin with an uppercase letter
+dotnet_diagnostic.SA1300.severity = none

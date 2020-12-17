@@ -16,6 +16,9 @@
 
         private string tagText;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignIn"/> class.
+        /// </summary>
         public SignIn()
         {
             InitializeComponent();
@@ -51,8 +54,6 @@
             }
 #endif
             taskADB = new TaskAssistantContext();
-
-            var loggedUserTasks = taskADB.Users.Include(u => u.Tasks).FirstOrDefault(u => u.Username == usernameBox.Text).Tasks;
 
             var loggedUser = from u in taskADB.Users.ToList() // !!! taskADB.Users.ToList() не має списку тасків
                              where u.Username == usernameBox.Text && DataGenerator.GetSaltHash(PassBox.Password, u.Salt) == u.Password
