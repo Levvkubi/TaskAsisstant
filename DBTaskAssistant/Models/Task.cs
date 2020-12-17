@@ -1,8 +1,4 @@
-﻿// <copyright file="Task.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace DBTaskAssistant
+﻿namespace DBTaskAssistant
 {
     using System;
 

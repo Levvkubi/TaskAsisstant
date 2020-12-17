@@ -1,8 +1,4 @@
-﻿// <copyright file="DataGenerator.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace DBTaskAssistant
+﻿namespace DBTaskAssistant
 {
     using System;
     using System.Collections.Generic;
@@ -26,8 +22,18 @@ namespace DBTaskAssistant
         private static int maxPrior = 10;
         private static int saltLen = 6;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataGenerator"/> class.
+        /// </summary>
         public DataGenerator() { }
 
+        /// <summary>
+        /// Function that generates random string.
+        /// </summary>
+        /// <param name="minLen">Minimal length.</param>
+        /// <param name="maxLen">Maximum length.</param>
+        /// <param name="useDigit">Value that indicates if numbers are included.</param>
+        /// <returns>String value.</returns>
         public static string GetRandStr(int minLen, int maxLen, bool useDigit = false)
         {
             string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -47,32 +53,12 @@ namespace DBTaskAssistant
             return res.ToString();
         }
 
-        private static bool Contain(List<User> users, string login)
-        {
-            foreach (var item in users)
-            {
-                if (item.Username == login)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        private static bool Contain(List<Task> tasks, int id)
-        {
-            foreach (var item in tasks)
-            {
-                if (item.Id == id)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
+        /// <summary>
+        /// Function that converts salt into hash.
+        /// </summary>
+        /// <param name="pass">Password that is added to salt.</param>
+        /// <param name="salt">Salt that is added to password and then hashed.</param>
+        /// <returns>Hash code.</returns>
         public static string GetSaltHash(string pass, string salt)
         {
             string toHash = pass + salt;
@@ -82,6 +68,12 @@ namespace DBTaskAssistant
             return Convert.ToBase64String(hash);
         }
 
+        /// <summary>
+        /// Generates values to DB.
+        /// </summary>
+        /// <param name="context">DB context.</param>
+        /// <param name="usersCount">Number of users.</param>
+        /// <param name="tasksCount">Number of tasks.</param>
         public static void GenerateData(TaskAssistantContext context, int usersCount = 30, int tasksCount = 50)
         {
             string login, name, surname, pass, salt, heshpass;
@@ -90,7 +82,8 @@ namespace DBTaskAssistant
                 do
                 {
                     login = GetRandStr(minLogLen, maxLogLen, true);
-                } while (Contain(context.Users.ToList(), login));
+                }
+                while (Contain(context.Users.ToList(), login));
                 name = GetRandStr(minNamesLen, maxNamesLen, false);
                 surname = GetRandStr(minNamesLen, maxNamesLen, false);
                 pass = GetRandStr(minPassLen, maxPassLen, true);
@@ -135,6 +128,32 @@ namespace DBTaskAssistant
             }
 
             context.SaveChanges();
+        }
+
+        private static bool Contain(List<User> users, string login)
+        {
+            foreach (var item in users)
+            {
+                if (item.Username == login)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static bool Contain(List<Task> tasks, int id)
+        {
+            foreach (var item in tasks)
+            {
+                if (item.Id == id)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

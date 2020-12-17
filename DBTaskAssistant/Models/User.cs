@@ -1,8 +1,4 @@
-﻿// <copyright file="User.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace DBTaskAssistant
+﻿namespace DBTaskAssistant
 {
     using System.Collections.Generic;
 
@@ -33,6 +29,10 @@ namespace DBTaskAssistant
             this.Salt = salt;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="User"/> class.
+        /// </summary>
+        /// <param name="user">User element.</param>
         public User(User user)
         {
             this.Username = user.Username;
