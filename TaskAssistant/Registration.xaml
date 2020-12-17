@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DBTaskAssistant.ViewModels;assembly=DBTaskAssistant"
+        xmlns:local="clr-namespace:DBTaskAssistant.Models;assembly=DBTaskAssistant"
         mc:Ignorable="d"
         Title="Registration" MinHeight="720" MinWidth="1280" Height="720" Width="1280">
     <Window.DataContext>
@@ -242,7 +242,7 @@
                         Foreground="White" 
                         Background="Transparent" 
                         BorderThickness="0" 
-                        Click="login_Click"/>
+                        Click="Login_Click"/>
             </StackPanel>
         </Border>
 

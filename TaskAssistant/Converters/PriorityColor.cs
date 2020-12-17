@@ -1,13 +1,12 @@
-﻿// <copyright file="PriorityColor.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace TaskAssistant
+﻿namespace TaskAssistant
 {
     using System;
     using System.Globalization;
     using System.Windows.Data;
 
+    /// <summary>
+    /// Class that converts colors.
+    /// </summary>
     public class PriorityColor : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

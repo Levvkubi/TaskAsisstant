@@ -13,17 +13,34 @@ namespace DBTaskAssistant
     /// </summary>
     public partial class TaskAssistantContext : DbContext
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TaskAssistantContext"/> class.
+        /// </summary>
         public TaskAssistantContext() { }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TaskAssistantContext"/> class.
+        /// </summary>
+        /// <param name="options">Options.</param>
         public TaskAssistantContext(DbContextOptions<TaskAssistantContext> options)
             : base(options)
         {
         }
 
+        /// <summary>
+        /// Gets or sets task list from DB.
+        /// </summary>
         public virtual DbSet<Task> Tasks { get; set; }
 
+        /// <summary>
+        /// Gets or sets user list from DB.
+        /// </summary>
         public virtual DbSet<User> Users { get; set; }
 
+        /// <summary>
+        /// Function that configures connections to DB.
+        /// </summary>
+        /// <param name="optionsBuilder">Builder that configures connection.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -36,6 +53,10 @@ namespace DBTaskAssistant
             }
         }
 
+        /// <summary>
+        /// Function that import model settings.
+        /// </summary>
+        /// <param name="modelBuilder">Builder that configures models.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Task>(entity =>

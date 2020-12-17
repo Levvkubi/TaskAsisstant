@@ -1,25 +1,23 @@
-﻿// <copyright file="Registration.xaml.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace TaskAssistant
+﻿namespace TaskAssistant
 {
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Windows;
     using DBTaskAssistant;
-    using DBTaskAssistant.ViewModels;
+    using DBTaskAssistant.Models;
 
     /// <summary>
     /// Class that adds logic to Registration View.
     /// </summary>
     public partial class Registration : Window
     {
-        TaskAssistantContext taskADB;
+        private TaskAssistantContext taskADB;
+        private string passtagText;
+        private string conftagText;
 
-        string passtagText;
-        string conftagText;
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Registration"/> class.
+        /// </summary>
         public Registration()
         {
             this.InitializeComponent();
@@ -29,7 +27,7 @@ namespace TaskAssistant
 
         private void PassBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (PassBox.Password == string.Empty)
+            if (PassBox.Password.Length == 0)
             {
                 PassBox.Tag = passtagText;
             }
@@ -41,7 +39,7 @@ namespace TaskAssistant
 
         private void ConfPassBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (ConfPassBox.Password == string.Empty)
+            if (ConfPassBox.Password.Length == 0)
             {
                 ConfPassBox.Tag = conftagText;
             }
@@ -51,7 +49,7 @@ namespace TaskAssistant
             }
         }
 
-        private void login_Click(object sender, RoutedEventArgs e)
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
             SignIn signIn = new SignIn();
             this.Close();

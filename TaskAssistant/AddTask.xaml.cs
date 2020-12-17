@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Windows;
     using DBTaskAssistant;
-    using DBTaskAssistant.ViewModels;
+    using DBTaskAssistant.Models;
 
     /// <summary>
     /// Class that adds logic to Add Task View.
@@ -17,6 +17,11 @@
         private User currentUser = new User();
         private ObservableCollection<Task> taskList;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AddTask"/> class.
+        /// </summary>
+        /// <param name="loggedUser">User that is logged.</param>
+        /// <param name="tasks">Collection of tasks of current user.</param>
         public AddTask(User loggedUser, ObservableCollection<Task> tasks)
         {
             InitializeComponent();
@@ -37,9 +42,9 @@
             Random rnd = new Random();
 
             TaskModel newTask = new TaskModel();
-            newTask.Note = Node.Text;
-            newTask.Date = new DateTime(addVM.date.Year, addVM.date.Month, addVM.date.Day, addVM.currHour, addVM.currMinute, 1);
-            newTask.Priority = Convert.ToInt32(addVM.priority);
+            newTask.Note = Note.Text;
+            newTask.Date = new DateTime(addVM.Date.Year, addVM.Date.Month, addVM.Date.Day, addVM.CurrHour, addVM.CurrMinute, 1);
+            newTask.Priority = Convert.ToInt32(addVM.Priority);
             newTask.Id = index++;
 
             Task task = new Task(newTask.Id, currentUser.Username, newTask.Note, newTask.Date, newTask.Priority);

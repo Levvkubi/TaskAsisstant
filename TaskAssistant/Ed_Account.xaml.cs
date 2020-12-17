@@ -1,23 +1,26 @@
 ﻿namespace TaskAssistantForms
 {
-    using DBTaskAssistant;
-    using Microsoft.EntityFrameworkCore;
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Windows;
+    using DBTaskAssistant;
     using TaskAssistant;
 
     /// <summary>
     /// Interaction logic for Ed_Account.xaml.
     /// </summary>
-    public partial class Ed_Account : Window
+    public partial class EditAccount : Window
     {
         private string passtagText;
         private string conftagText;
         private User currentUser;
         private TaskAssistantContext taskADB;
 
-        public Ed_Account(User user)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditAccount"/> class.
+        /// </summary>
+        /// <param name="user">Current user.</param>
+        public EditAccount(User user)
         {
             InitializeComponent();
             currentUser = user;
@@ -26,10 +29,6 @@
             firstNameBox.Text = user.Name;
             secondNameBox.Text = user.Surname;
             UsernameBox.Text = user.Username;
-        }
-
-        private void regist_Click(object sender, RoutedEventArgs e)
-        {
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,18 +40,26 @@
 
         private void PassBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (PassBox.Password == string.Empty)
+            if (PassBox.Password.Length == 0)
+            {
                 PassBox.Tag = passtagText;
+            }
             else
+            {
                 PassBox.Tag = string.Empty;
+            }
         }
 
         private void ConfPassBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (ConfPassBox.Password == string.Empty)
+            if (ConfPassBox.Password.Length == 0)
+            {
                 ConfPassBox.Tag = conftagText;
+            }
             else
+            {
                 ConfPassBox.Tag = string.Empty;
+            }
         }
 
         private void SaveChanges_Click(object sender, RoutedEventArgs e)
@@ -110,6 +117,11 @@
                 currentUser.Surname = secondNameBox.Text;
                 user.FirstOrDefault().Username = UsernameBox.Text;
                 currentUser.Username = UsernameBox.Text;
+                if (!(PassBox.Password == "NoPassword1"))
+                {
+                    user.FirstOrDefault().Password = DataGenerator.GetSaltHash(PassBox.Password, user.FirstOrDefault().Salt);
+                }
+
                 taskADB.SaveChanges();
                 this.Close();
                 main.Show();

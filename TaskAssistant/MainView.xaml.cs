@@ -13,6 +13,10 @@
         private User currentUser = new User();
         private MainVM viewmodel;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainView"/> class.
+        /// </summary>
+        /// <param name="loggedUser">User that is logged.</param>
         public MainView(User loggedUser)
         {
             InitializeComponent();
@@ -43,14 +47,13 @@
 
         private void UserEdit_Click(object sender, RoutedEventArgs e)
         {
-            Ed_Account ed_Account = new Ed_Account(currentUser);
+            EditAccount ed_Account = new EditAccount(currentUser);
             this.Close();
             ed_Account.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void SortBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

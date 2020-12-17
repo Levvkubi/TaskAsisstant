@@ -1,4 +1,4 @@
-﻿<Window x:Class="TaskAssistantForms.Ed_Account"
+﻿<Window x:Class="TaskAssistantForms.EditAccount"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -203,9 +203,9 @@
                 <TextBlock x:Name="usernameErrorBloc" Style="{StaticResource ErrorBlock}"/>
                 <TextBox x:Name="UsernameBox" Tag="Введіть іншу пошту" Style="{StaticResource InputFiled}"/>
                 <TextBlock x:Name="passwordErrorBloc" Style="{StaticResource ErrorBlock}"/>
-                <PasswordBox x:Name="PassBox" Tag="Введіть новий пароль" Style="{StaticResource InputFiledPass}" PasswordChanged="PassBox_PasswordChanged"/>
+                <PasswordBox x:Name="PassBox" Tag="Введіть новий пароль, якщо не бажаєте змінити введіть NoPassword1" Style="{StaticResource InputFiledPass}" PasswordChanged="PassBox_PasswordChanged"/>
                 <TextBlock x:Name="confPasswordErrorBloc" Style="{StaticResource ErrorBlock}"/>
-                <PasswordBox x:Name="ConfPassBox" Tag="Повторіть новий пароль" Style="{StaticResource InputFiledPass}" PasswordChanged="ConfPassBox_PasswordChanged"/>
+                <PasswordBox x:Name="ConfPassBox" Tag="Повторіть новий пароль, якщо не бажаєте змінити введіть NoPassword1" Style="{StaticResource InputFiledPass}" PasswordChanged="ConfPassBox_PasswordChanged"/>
                 <Grid>
                     <Grid.ColumnDefinitions >
                         <ColumnDefinition Width="1*"/>
