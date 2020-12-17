@@ -18,15 +18,80 @@ namespace DBTaskAssistant
 
         public ObservableCollection<int> minutes { get; set; }
 
-        public int currHour { get; set; }
+        private int currHour { get; set; }
+        public int CurrHour
+        {
+            get
+            {
+                return currHour;
+            }
 
-        public int currMinute { get; set; }
+            set
+            {
+                currHour = value;
+                this.RaisePropertyChanged(() => currHour);
+            }
+        }
 
-        public DateTime date { get; set; }
+        private int currMinute { get; set; }
+        public int CurrMinute
+        {
+            get
+            {
+                return currMinute;
+            }
 
-        public string Node { get; set; }
+            set
+            {
+                currMinute = value;
+                this.RaisePropertyChanged(() => currMinute);
+            }
+        }
 
-        public int priority { get; set; }
+        private DateTime date { get; set; }
+        public DateTime Date
+        {
+            get
+            {
+                return date;
+            }
+
+            set
+            {
+                date = value;
+                this.RaisePropertyChanged(() => date);
+            }
+        }
+
+        private string note { get; set; }
+        public string Note
+        {
+            get
+            {
+                return note;
+            }
+
+            set
+            {
+                note = value;
+                this.RaisePropertyChanged(() => note);
+            }
+        }
+
+        private int priority { get; set; }
+        public int Priority
+        {
+            get
+            {
+                return priority;
+            }
+
+            set
+            {
+                priority = value;
+                this.RaisePropertyChanged(() => priority);
+            }
+        }
 
         public AddVM()
         {
@@ -48,26 +113,26 @@ namespace DBTaskAssistant
                 this.minutes.Add(j);
             }
 
-            this.currHour = DateTime.Now.Hour;
-            this.currMinute = DateTime.Now.Minute;
-            this.date = DateTime.Now;
-            this.priority = 3;
+            this.CurrHour = DateTime.Now.Hour;
+            this.CurrMinute = DateTime.Now.Minute;
+            this.Date = DateTime.Now;
+            this.Priority = 3;
         }
 
         public void Zapovn(ObservableCollection<Task> tasks, Task currtask, bool change)
         {
             if (!change)
             {
-                this.currHour = DateTime.Now.Hour;
-                this.currMinute = DateTime.Now.Minute;
-                this.date = DateTime.Now;
-                this.priority = 3;
+                this.CurrHour = DateTime.Now.Hour;
+                this.CurrMinute = DateTime.Now.Minute;
+                this.Date = DateTime.Now;
+                this.Priority = 3;
             }
             else
             {
-                this.currHour = currtask.Date.Hour;
-                this.currMinute = currtask.Date.Minute;
-                this.Node = currtask.Note;
+                this.CurrHour = currtask.Date.Hour;
+                this.CurrMinute = currtask.Date.Minute;
+                this.Note = currtask.Note;
                 this.priority = currtask.Priority;
             }
         }

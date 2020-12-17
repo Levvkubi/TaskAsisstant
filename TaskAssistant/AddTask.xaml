@@ -280,6 +280,7 @@
         <StackPanel>
             <!--<TextBlock Text="Node" Foreground="White" FontSize="20" Margin="20 10 0 0"/>-->
             <TextBox x:Name="Node" 
+                     Text="{Binding Note}"
                      Tag="Node" 
                      FontSize="25" 
                      Foreground="#699cfc" 
@@ -295,7 +296,7 @@
                 <Calendar x:Name="Calend" 
                             Grid.Column="0" 
                           Background="White"
-                            SelectedDate="{Binding date}"
+                            SelectedDate="{Binding Date}"
                             IsTodayHighlighted="True"
                           Margin="10"/>
 
@@ -306,20 +307,20 @@
                         <TextBlock Text="Hour" Style="{StaticResource TimeText}"/>
                         <ComboBox x:Name="HourBox"
                   ItemsSource="{Binding hours}"
-                  SelectedValue="{Binding currHour}"/>
+                  SelectedValue="{Binding CurrHour}"/>
                     </StackPanel>
                     <StackPanel   >
                         <TextBlock Text="Minute" Style="{StaticResource TimeText}"/>
                         <ComboBox x:Name="MinuteBox"
                   ItemsSource="{Binding minutes}"
-                  SelectedValue="{Binding currMinute}"/>
+                  SelectedValue="{Binding CurrMinute}"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Column="3" >
                     <TextBlock Text="Пріорітет" Style="{StaticResource Text}"/>
                     <ComboBox x:Name="PriorityBox"
                   ItemsSource="{Binding priorities}"
-                  SelectedValue="{Binding priority}"/>
+                  SelectedValue="{Binding Priority}"/>
                 </StackPanel>
 
 

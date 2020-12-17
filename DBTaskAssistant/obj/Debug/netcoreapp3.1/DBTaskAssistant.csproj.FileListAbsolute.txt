@@ -53,3 +53,16 @@ D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssist
 D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.pdb
 D:\Repository\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.genruntimeconfig.cache
 >>>>>>> 63159da1ce969bb2502e11a379b02c973979a725
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.deps.json
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.runtimeconfig.json
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.runtimeconfig.dev.json
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.dll
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\bin\Debug\netcoreapp3.1\DBTaskAssistant.pdb
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.csprojAssemblyReference.cache
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.AssemblyInfoInputs.cache
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.AssemblyInfo.cs
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.csproj.CoreCompileInputs.cache
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.dll
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.pdb
+D:\Programming\С#\Chill\TAtest\TaskAsisstant\DBTaskAssistant\obj\Debug\netcoreapp3.1\DBTaskAssistant.genruntimeconfig.cache
