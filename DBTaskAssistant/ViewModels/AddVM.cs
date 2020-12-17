@@ -58,50 +58,96 @@
         /// <summary>
         /// Gets or sets current hour variable.
         /// </summary>
-        public int CurrHour { get; set; }
+        public int CurrHour
+        {
+            get
+            {
+                return currHour;
+            }
+
+            set
+            {
+                currHour = value;
+                this.RaisePropertyChanged(() => currHour);
+            }
+        }
 
         /// <summary>
         /// Gets or sets current minute variable.
         /// </summary>
-        public int CurrMinute { get; set; }
+        public int CurrMinute
+        {
+            get
+            {
+                return currMinute;
+            }
+
+            set
+            {
+                currMinute = value;
+                this.RaisePropertyChanged(() => currMinute);
+            }
+        }
 
         /// <summary>
         /// Gets or sets current hour variable.
         /// </summary>
-        public DateTime Date { get; set; }
+        public DateTime Date
+        {
+            get
+            {
+                return date;
+            }
+
+            set
+            {
+                date = value;
+                this.RaisePropertyChanged(() => date);
+            }
+        }
 
         /// <summary>
         /// Gets or sets current hour variable.
         /// </summary>
-        public string Note { get; set; }
+        public string Note
+        {
+            get
+            {
+                return note;
+            }
+
+            set
+            {
+                note = value;
+                this.RaisePropertyChanged(() => note);
+            }
+        }
 
         /// <summary>
         /// Gets or sets priority variable.
         /// </summary>
-        public int Priority { get; set; }
-
-        /// <summary>
-        /// Function that is used to set Date, Priority, Current hour & minute.
-        /// </summary>
-        /// <param name="tasks">Task list.</param>
-        /// <param name="currtask">Current task.</param>
-        /// <param name="change">Bool variable to show changes.</param>
-        public void Zapovn(ObservableCollection<Task> tasks, Task currtask, bool change)
+        public int Priority
         {
-            if (!change)
+            get
             {
-                this.CurrHour = DateTime.Now.Hour;
-                this.CurrMinute = DateTime.Now.Minute;
-                this.Date = DateTime.Now;
-                this.Priority = 3;
+                return priority;
             }
-            else
+
+            set
             {
-                this.CurrHour = currtask.Date.Hour;
-                this.CurrMinute = currtask.Date.Minute;
-                this.Note = currtask.Note;
-                this.Priority = currtask.Priority;
+                priority = value;
+                this.RaisePropertyChanged(() => priority);
             }
         }
+
+        private int currHour { get; set; }
+
+        private int currMinute { get; set; }
+
+        private DateTime date { get; set; }
+
+        private string note { get; set; }
+
+        private int priority { get; set; }
     }
 }

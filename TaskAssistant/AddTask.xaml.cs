@@ -16,19 +16,30 @@
         private TaskAssistantContext taskADB;
         private User currentUser = new User();
         private ObservableCollection<Task> taskList;
+        private Task oldTask = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddTask"/> class.
         /// </summary>
         /// <param name="loggedUser">User that is logged.</param>
         /// <param name="tasks">Collection of tasks of current user.</param>
-        public AddTask(User loggedUser, ObservableCollection<Task> tasks)
+        public AddTask(User loggedUser, ObservableCollection<Task> tasks, Task oldtask = null)
         {
             InitializeComponent();
             taskADB = new TaskAssistantContext();
             currentUser = loggedUser;
             addVM = (AddVM)DataContext;
             taskList = tasks;
+
+            if (oldtask != null)
+            {
+                oldTask = oldtask;
+                addVM.Note = oldTask.Note;
+                addVM.Priority = oldtask.Priority;
+                addVM.CurrHour = oldtask.Date.Hour;
+                addVM.CurrMinute = oldtask.Date.Minute;
+                addVM.Date = oldtask.Date.Date;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,14 +49,26 @@
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            int index = taskADB.Tasks.Count() + 10;
             Random rnd = new Random();
 
             TaskModel newTask = new TaskModel();
-            newTask.Note = Note.Text;
+
+            newTask.Note = addVM.Note;
             newTask.Date = new DateTime(addVM.Date.Year, addVM.Date.Month, addVM.Date.Day, addVM.CurrHour, addVM.CurrMinute, 1);
             newTask.Priority = Convert.ToInt32(addVM.Priority);
-            newTask.Id = index++;
+            int index;
+            if (oldTask == null)
+            {
+                index = taskADB.Tasks.Max(i => i.Id) + 1;
+            }
+            else
+            {
+                index = oldTask.Id;
+                taskADB.Tasks.Remove(oldTask);
+                taskList.Remove(oldTask);
+            }
+
+            newTask.Id = index;
 
             Task task = new Task(newTask.Id, currentUser.Username, newTask.Note, newTask.Date, newTask.Priority);
 

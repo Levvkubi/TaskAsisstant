@@ -169,7 +169,7 @@
     </Window.Resources>
     <Grid HorizontalAlignment="Right" Margin="0,0,-0.4,0.4" Width="1274" >
         <Grid.Background>
-            <ImageBrush ImageSource="D:\Repository\TaskAsisstant\TaskAssistant\Images\BackgroundLogin.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Images\BackgroundLogin.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>

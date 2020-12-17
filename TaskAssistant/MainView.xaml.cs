@@ -54,6 +54,12 @@
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            System.Windows.Media.Effects.BlurEffect objBlur = new System.Windows.Media.Effects.BlurEffect();
+            objBlur.Radius = 4;
+            this.Effect = objBlur;
+            AddTask addTask = new AddTask(currentUser, viewmodel.Tasks, viewmodel.CurrTask);
+            addTask.ShowDialog();
+            this.Effect = null;
         }
 
         private void SortBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

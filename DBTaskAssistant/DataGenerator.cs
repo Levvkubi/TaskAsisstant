@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Security.Cryptography;
     using System.Text;
+    using R = System.Security.Cryptography.RandomNumberGenerator;
 
     /// <summary>
     /// Class that generates random data.
@@ -43,11 +44,10 @@
             }
 
             StringBuilder res = new StringBuilder();
-            Random rnd = new Random();
-            int length = rnd.Next(minLen, maxLen + 1);
+            int length = R.GetInt32(minLen, maxLen + 1);
             for (int i = 0; i < length; i++)
             {
-                res.Append(valid[rnd.Next(valid.Length)]);
+                res.Append(valid[R.GetInt32(valid.Length)]);
             }
 
             return res.ToString();
